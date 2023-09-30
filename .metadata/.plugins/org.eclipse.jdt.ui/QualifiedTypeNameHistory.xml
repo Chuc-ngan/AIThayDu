@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Lab1.Action"/>
+    <fullyQualifiedTypeName name="Lab1.DynamicAction"/>
+    <fullyQualifiedTypeName name="Lab1.EnvironmentState"/>
+    <fullyQualifiedTypeName name="Lab1.Environment"/>
+    <fullyQualifiedTypeName name="Lab1.Environment.LocationState"/>
+    <fullyQualifiedTypeName name="Lab1.Percept"/>
+    <fullyQualifiedTypeName name="Lab2.Environment.LocationState"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="Lab2.AgentProgram"/>
+    <fullyQualifiedTypeName name="Lab2.EnvironmentState"/>
+    <fullyQualifiedTypeName name="Lab2.Environment"/>
+    <fullyQualifiedTypeName name="javax.management.loading.PrivateClassLoader"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="test"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+</qualifiedTypeNameHistroy>

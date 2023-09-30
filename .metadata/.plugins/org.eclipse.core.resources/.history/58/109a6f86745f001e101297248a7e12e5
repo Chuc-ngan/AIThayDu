@@ -1,0 +1,60 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class test {
+	public int Search(int[] arr) {
+		int max = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i] > max) {
+				max = arr[i];
+			}
+		}
+		int[] brr = new int[max+1];
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(Arrays.toString(arr));
+			if(arr[i] == brr[arr[i]]) {
+				System.out.println(Arrays.toString(brr));
+				brr[arr[i]]+=1;
+			}
+		}
+		int m = 0;
+		int re = 0;
+		for (int i = 0; i < brr.length; i++) {
+			if(brr[i] > re) {
+				re = brr[i];
+				m = i;
+			}
+		}
+		
+		return re;
+	}
+//		int count = 0;
+//		int key = 0;
+//		HashMap<Integer, Integer> map = new HashMap<>();
+//		for (int i : arr) {
+//			if (map.containsKey(i)) {
+//				map.put(i, map.get(i) + 1);
+//			} else {
+//				map.put(i, 1);
+//			}
+//		}
+//		for (Map.Entry<Integer, Integer> re : map.entrySet()) {
+//			if (re.getValue() >= count) {
+//				count = re.getValue();
+//				key = re.getKey();
+//			}
+//		}
+//
+//		return key;
+//
+//	}
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 3, 5, 1, 2, 3, 5, 1, 3, 5, 3 };
+		int[] arr2 = { 1, 2, 3, 4, 1, 2, 4, 3, 5, 6, 5, 1 };
+		test test = new test();
+		test.Search(arr);
+		System.out.println(test.Search(arr));
+	}
+}
