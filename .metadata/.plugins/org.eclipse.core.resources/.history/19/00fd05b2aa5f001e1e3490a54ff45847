@@ -108,13 +108,6 @@ public class Environment {
 		Percept percept = new Percept(agentLocation, LocationState);
 		return percept;
 	}
-	/**
-	 * In ra thong diep
-	 * @param m thong diep can in
-	 */
-	public void printMessage(String m) {
-		System.out.println(m);
-	}
 
 	public void step() {
 		envState.display();
