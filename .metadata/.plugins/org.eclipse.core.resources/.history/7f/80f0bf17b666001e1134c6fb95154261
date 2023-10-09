@@ -1,0 +1,73 @@
+package Lab2;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Set;
+import java.util.Stack;
+
+public class DepthFirstSearchAlgo implements ISearchAlgo {
+
+	@Override
+	public Node execute(Node root, String goal) {
+		Stack<Node> frontier = new Stack<Node>();
+		frontier.add(root);
+		Set<Node> explored = new HashSet<>();
+		while (!frontier.isEmpty()) {
+			Node node = frontier.pop();
+			if (node.getLabel().equals(goal)) {
+				return node;
+			} else {
+				explored.add(node);
+			}
+			for (Node child : node.getChildrenNodes()) {
+				if (!explored.contains(child) && !frontier.contains(child)) {
+					frontier.add(child);
+					child.setParent(node);
+				}
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Node execute(Node root, String start, String goal) {
+		 Stack<Node> frontier = new Stack<>();
+	        frontier.add(root);
+	        Set<Node> explored = new HashSet<>();
+
+	        while (!frontier.isEmpty()) {
+	            Node node = frontier.pop();
+
+	            if (node.getLabel().equals(start)) {
+	                explored.clear();
+	                frontier.clear();
+	                node.setParent(null);
+
+	                // Kiểm tra lại goal sau khi xóa thông tin
+	                if (node.getLabel().equals(goal)) {
+	                    return node;
+	                }
+
+	                for (Node child : node.getChildrenNodes()) {
+	                    if (!explored.contains(child) && !frontier.contains(child)) {
+	                        frontier.add(child);
+	                    }
+	                }
+	            } else {
+	                explored.add(node);
+	                
+	            }
+	            for (Node child : node.getChildrenNodes()) {
+					if (!explored.contains(child) && !frontier.contains(child)) {
+						frontier.add(child);
+						child.setParent(node);
+					}
+				}
+	        }
+
+	        return null; // Trả về null nếu không tìm thấy đường đi
+	    }
+}

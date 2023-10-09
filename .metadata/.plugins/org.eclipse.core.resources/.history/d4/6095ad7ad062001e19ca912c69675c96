@@ -1,0 +1,12 @@
+package Lab2_1;
+
+import java.util.List;
+
+public class Node {
+	private int state;
+	private List<Node> parents;
+	private List<Node> neighbours;
+	private boolean visited;
+	
+
+}

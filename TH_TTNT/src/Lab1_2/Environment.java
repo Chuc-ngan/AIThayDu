@@ -1,9 +1,9 @@
-package Lab2;
+package Lab1_2;
 
 import java.util.Random;
 
 
-import Lab2.Environment.LocationState;
+import Lab1_2.Environment.LocationState;
 
 public class Environment {
 	public static final Action MOVE_LEFT = new DynamicAction("LEFT");

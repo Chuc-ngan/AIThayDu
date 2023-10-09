@@ -1,4 +1,4 @@
-package Lab2; 
+package Lab1_2; 
 //nhận biết 
 public class Percept {
 	private String agentLocation;//vị trí agent

@@ -1,4 +1,4 @@
-package Lab2;
+package Lab1_2;
 
 public class TestSimpleReflexAgent {
 	public static void main(String[] args) {

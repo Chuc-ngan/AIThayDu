@@ -1,0 +1,24 @@
+package Lab2_1;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class NodeUtils {
+	public static List<String> printPath(Node node) {
+		if (node != null) {
+			List<String> result = new ArrayList<String>();
+			result.add(node.getState() + "");
+			Node tmp;
+			while ((tmp = node.getParents().get(0)) != null) {
+
+				result.add(tmp.getState() + "");
+				node = tmp;
+			}
+			Collections.reverse(result);
+			return result;
+		} else
+			return new ArrayList<String>();
+	}
+	
+}

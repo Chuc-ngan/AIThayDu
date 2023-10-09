@@ -1,4 +1,4 @@
-package Lab2; 
+package Lab1_2; 
 
 public class NoOpAction extends Action {
 	public static final NoOpAction NO_OP = new NoOpAction();

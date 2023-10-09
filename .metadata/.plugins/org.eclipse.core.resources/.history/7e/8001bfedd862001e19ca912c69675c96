@@ -1,0 +1,31 @@
+package Lab2_1;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BreadthFirstSearchAlgo {
+	public Node execute(Node root, int goal) {
+		if (root.getState() == goal) {
+			return root;
+		}
+
+		Queue<Node> frontier = new LinkedList<>();
+//        Map<Node, Node> parents = new HashMap<>();
+		frontier.add(root);
+		root.setVisited(true);
+		while (!frontier.isEmpty()) {
+			Node node = frontier.poll();
+			for (Node child : node.getNeighbours()) {
+				if (!child.isVisited()) {
+					node.setVisited(true);
+					if (node.getState() == goal) {
+						return node;
+					}
+					frontier.add(child);
+//	                    parents.put(child, node);
+				}
+			}
+		}
+		return null;
+	}
+}

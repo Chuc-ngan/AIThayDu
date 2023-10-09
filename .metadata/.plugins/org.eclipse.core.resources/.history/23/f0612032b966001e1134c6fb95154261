@@ -1,0 +1,67 @@
+package Lab2_1;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+
+public class BreadthFirstSearchAlgo {
+//	public void execute(Node root, int goal) {
+//		if (root.getState() == goal) {
+//			System.out.println(root.getState());
+//			return;
+//		}
+//		Map<Integer, Integer> map = new HashMap<>();
+//		Queue<Node> frontier = new LinkedList<>();
+//		frontier.add(root);
+//		root.setVisited(true);
+//		while (!frontier.isEmpty()) {
+//			Node node = frontier.poll();
+//			for (Node child : node.getNeighbours()) {
+//				if (!child.isVisited()) {
+//					map.put(child.getState(), node.getState());
+//					node.setVisited(true);
+//					frontier.add(child);
+//					if (child.getState() == goal) {
+//						System.out.println(NodeUtils.print(child, map));
+//						return;
+//					}
+//					
+//				}
+//			}
+//		}
+//		return;
+//	}
+	public void bfsUsingQueue(Node initial, int goal) {
+		if(initial.getState() == goal) {
+			System.out.println(goal);
+			return;
+		}
+		
+		Queue<Node> queue = new LinkedList<>();
+		queue.add(initial);
+		initial.setVisited(true);
+		
+		Map<Integer, Integer> parents = new HashMap<>();
+		
+		while(!queue.isEmpty()) {
+			Node current = queue.poll();
+			
+			for(Node neighbour : current.getNeighbours()) {
+				if(!neighbour.isVisited()) {
+					neighbour.setVisited(true);
+					parents.put(neighbour.getState(), current.getState());
+					queue.add(neighbour);
+					
+					if(neighbour.getState() == goal) {
+//						parents.put(neighbour.getState(), current.getState());
+						System.out.println(NodeUtils.print(neighbour, parents));
+						return;
+					}
+				}
+				
+			}
+		}
+	}
+
+}
