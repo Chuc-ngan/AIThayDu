@@ -3,13 +3,12 @@ package Lab2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Node implements Comparable<Node> {
+public class Node implements Comparable<Node>, Cloneable {
 	private String label;
-	private Node parent; // for printing the path from the start node to goal node
+	private Node parent; // for print the path from the start node to goal node
 	private double pathCost;// from the root node to this node
 	private int depth;// used for compute the depth of a node in a tree search
 	private List<Edge> children = new ArrayList<Edge>();
-
 	public Node(String label) {
 		this.label = label;
 	}
@@ -20,14 +19,6 @@ public class Node implements Comparable<Node> {
 
 	public String getLabel() {
 		return label;
-	}
-
-	public int getDepth() {
-		return depth;
-	}
-
-	public void setDepth(int depth) {
-		this.depth = depth;
 	}
 
 	public Node getParent() {
@@ -44,9 +35,8 @@ public class Node implements Comparable<Node> {
 
 	public List<Node> getChildrenNodes() {
 		List<Node> result = new ArrayList<Node>();
-		for (Edge edge : this.children) {
+		for (Edge edge : this.children) 
 			result.add(edge.getEnd());
-		}
 		return result;
 	}
 
@@ -69,6 +59,14 @@ public class Node implements Comparable<Node> {
 	public void setPathCost(double pathCost) {
 		this.pathCost = pathCost;
 	}
+	
+	public int getDepth() {
+		return depth;
+	}
+	
+	public void setDepth(int depth) {
+		this.depth = depth;
+	}
 
 	@Override
 	public int hashCode() {
@@ -77,7 +75,7 @@ public class Node implements Comparable<Node> {
 		result = prime * result + ((label == null) ? 0 : label.hashCode());
 		return result;
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -96,6 +94,17 @@ public class Node implements Comparable<Node> {
 	@Override
 	public String toString() {
 		return this.label + "_" + this.parent.getLabel() + " " + this.pathCost;
+	}
+	
+	@Override
+	public Node clone() {
+		Node re = null;
+		try {
+			re = (Node) super.clone();
+		} catch (CloneNotSupportedException ex) {
+			System.err.println("CloneNotSupportedException");
+		}
+		return re;
 	}
 
 	@Override

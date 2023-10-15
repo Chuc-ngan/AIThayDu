@@ -20,5 +20,17 @@ public class NodeUtils {
 		} else
 			return new ArrayList<String>();
 	}
+	public static void print(Node node) {
+		if (node == null) {
+			System.out.println("null\n");
+			return;
+		}
+		List<String> path = printPath(node);
+		StringBuilder builder = new StringBuilder();
+		for (String str : path)
+			builder.append(str + " —> ");
+		System.out.println(builder.substring(0, builder.length() - 4));
+		System.out.println(node.getPathCost() + "\n");
+	}
 	
 }

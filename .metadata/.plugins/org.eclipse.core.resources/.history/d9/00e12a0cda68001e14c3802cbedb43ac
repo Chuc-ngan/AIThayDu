@@ -1,0 +1,43 @@
+package Lab2;
+
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Set;
+
+public class UniformCostSearchAlgo implements ISearchAlgo{
+
+	@Override
+	public Node execute(Node root, String goal) {
+		Set<Node> explored = new HashSet<>();
+		PriorityQueue<Node> frontier =  new PriorityQueue<>();
+		frontier.add(root);
+		while (!frontier.isEmpty()) {
+			Node node = frontier.poll();
+			if (node.getLabel().equals(goal)) {
+				return node;
+			} else
+				explored.add(node);
+		}
+		
+		return null;
+	}
+
+	@Override
+	public Node execute(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Node executeTreeSearch(Node root, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Node executeTreeSearch(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

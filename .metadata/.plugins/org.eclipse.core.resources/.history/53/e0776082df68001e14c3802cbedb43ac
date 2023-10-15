@@ -1,0 +1,39 @@
+package Lab2;
+
+import java.util.Stack;
+
+public class LimitedDeepSearchGraph  implements ISearchAlgo{
+
+	@Override
+	public Node execute(Node root, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Node execute(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	/**
+	 * 
+	 */
+	@Override
+	public Node execute(Node root, String goal, int limit) {
+		Stack<Node> frontier = new Stack<>();
+		
+	}
+
+	@Override
+	public Node executeTreeSearch(Node root, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Node executeTreeSearch(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

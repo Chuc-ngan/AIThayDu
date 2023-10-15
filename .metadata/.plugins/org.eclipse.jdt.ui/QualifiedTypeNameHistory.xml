@@ -16,7 +16,6 @@
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="Lab2.Node"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="Lab2_1.Node"/>
@@ -26,7 +25,10 @@
     <fullyQualifiedTypeName name="Lab2_1.NodeUtils"/>
     <fullyQualifiedTypeName name="Lab2.NodeUtils"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Lab2.ISearchAlgo"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="Lab2.DepthFirstSearchAlgo"/>
 </qualifiedTypeNameHistroy>
