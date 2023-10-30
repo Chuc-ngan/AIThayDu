@@ -1,0 +1,69 @@
+package lab4;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class AStarSearchAlgo implements IInformedSearchAlgo {
+
+	public Node execute(Node root, String goal) {
+		PriorityQueue<Node> frontier = new PriorityQueue<Node>(new Comparator<Node>() {
+
+			@Override
+			public int compare(Node o1, Node o2) {
+				double f1 = o1.getG()+o1.getH();
+				double f2 = o2.getG()+o2.getH();
+				int re  =Double.compare(f1, f2);
+				return re==0?o1.getLabel().compareTo(o2.getLabel()):re;
+			}
+		});
+		frontier.add(root);
+		List<Node> explore = new ArrayList<>();
+		while (!frontier.isEmpty()) {
+			Node current = frontier.poll();
+			System.out.print(current+" ");
+			System.out.println(frontier);
+			if (current.getLabel().equals(goal)) {
+				return current;
+			} else {
+				List<Edge> children = current.getChildren();
+				System.out.println(current.getLabel());
+				explore.add(current);
+				for (Edge edge : children) {
+					Node end = edge.getEnd();
+					double newCost = current.getG() + edge.getWeight();
+					if (!frontier.contains(end) && !explore.contains(end)) {
+						frontier.add(end);
+						end.setG(newCost);
+						end.setParent(current);
+					} 
+					else if (frontier.contains(end)) {
+						if (end.getG() > newCost) {
+//							frontier.remove(end);
+							end.setParent(current);
+							end.setG(newCost);
+//							frontier.add(end);
+						}
+					}
+				}
+			}
+		}
+		return null;
+
+	}
+
+	@Override
+	public Node execute(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+
+class NodeComparatorAStar implements Comparator<Node> {
+	@Override
+	public int compare(Node node1, Node node2) {
+		return Double.compare(node1.getH() + node1.getG(), node2.getH() + node2.getG());
+	}
+}

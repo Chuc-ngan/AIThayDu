@@ -1,0 +1,27 @@
+package lab4;
+
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class Greedybestfirstearch implements IInformedSearchAlgo {
+
+	@Override
+	public lab4.Node execute(lab4.Node root, String goal) {
+		PriorityQueue<Node> frontier = new PriorityQueue<Node>(new NodeComparator());
+		return null;
+	}
+
+	@Override
+	public lab4.Node execute(lab4.Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+
+class NodeComparator implements Comparator<Node> {
+	@Override
+	public int compare(Node node1, Node node2) {
+		return Double.compare(node1.getH(), node2.getH());
+	}
+}
