@@ -1,0 +1,16 @@
+package lab5;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class GreedyBestFirstSearch implements IPuzzleAlgo{
+
+	@Override
+	public Node execute(Puzzle model) {
+		PriorityQueue<Node> frontier = new PriorityQueue<Node>(PuzzleUtils.HeuristicComparatorByH);
+		List<Node> explored = new ArrayList<>();
+		
+	}
+
+}
