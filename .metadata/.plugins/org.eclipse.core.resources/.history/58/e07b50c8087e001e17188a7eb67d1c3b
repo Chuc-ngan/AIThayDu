@@ -1,9 +1,0 @@
-package test;
-
-public class Test {
-	
-	public static void main(String[] args) {
-		long a = (long) 1e10;
-		long b = 1e10;
-	}
-}

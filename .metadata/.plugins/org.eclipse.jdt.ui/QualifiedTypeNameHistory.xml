@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="Lab1.Environment.LocationState"/>
     <fullyQualifiedTypeName name="Lab1.Percept"/>
     <fullyQualifiedTypeName name="Lab2.Environment.LocationState"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="Lab2.AgentProgram"/>
     <fullyQualifiedTypeName name="Lab2.EnvironmentState"/>
     <fullyQualifiedTypeName name="Lab2.Environment"/>
@@ -16,7 +15,6 @@
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="Lab2.Node"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="Lab2_1.Node"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
@@ -31,7 +29,6 @@
     <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
     <fullyQualifiedTypeName name="lab4.Edge"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="lab4.NodeComparatorAStar"/>
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="lab4.Greedybestfirstearch.NodeComparator"/>
@@ -40,11 +37,19 @@
     <fullyQualifiedTypeName name="lab4.AStarSearchAlgo"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="lab5.PuzzleUtils"/>
-    <fullyQualifiedTypeName name="lab5.IPuzzleAlgo"/>
     <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.sql.Array"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="lab5.GreedyBestFirstSearch"/>
+    <fullyQualifiedTypeName name="lab5.IPuzzleAlgo"/>
+    <fullyQualifiedTypeName name="lab5.AStart"/>
+    <fullyQualifiedTypeName name="Lab6_2.Node"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="Lab6_2.HillClimbing"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="Lab7.Node"/>
+    <fullyQualifiedTypeName name="javax.swing.text.AsyncBoxView.ChildLocator"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>
