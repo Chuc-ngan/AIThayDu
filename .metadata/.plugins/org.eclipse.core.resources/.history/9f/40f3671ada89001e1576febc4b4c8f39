@@ -1,0 +1,8 @@
+package lab8;
+
+public class Test {
+	public static void main(String[] args) {
+		MiniMaxSearchAlgo miniMaxSearchAlgo = new MiniMaxSearchAlgo();
+		System.out.println(miniMaxSearchAlgo.execute(null));
+	}
+}
