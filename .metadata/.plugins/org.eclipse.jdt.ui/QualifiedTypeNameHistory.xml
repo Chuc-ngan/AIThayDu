@@ -46,14 +46,17 @@
     <fullyQualifiedTypeName name="Lab6_2.Node"/>
     <fullyQualifiedTypeName name="Lab6_2.HillClimbing"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="Lab7.Node"/>
     <fullyQualifiedTypeName name="javax.swing.text.AsyncBoxView.ChildLocator"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="lab8.MiniMaxSearchAlgo"/>
     <fullyQualifiedTypeName name="lab8.Node"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="lab8.AlphaBetaSearchAlgo"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="lab8.ISearchAlgo"/>
+    <fullyQualifiedTypeName name="lab8.AlphaBetaRightToLeftSearchAlgo"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="lab9.Node"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
